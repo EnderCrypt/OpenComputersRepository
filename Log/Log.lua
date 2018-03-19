@@ -21,7 +21,7 @@ function log.addLevel(name, priority)
 	local data = {}
 	data.name = name
 	data.priority = priority
-	log.level[name] = data
+	log.level[string.lower(name)] = data
 end
 
 log.addLevel("Trace", 0)
