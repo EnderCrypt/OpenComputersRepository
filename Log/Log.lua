@@ -12,7 +12,7 @@ function log.print(level, message)
 	if (level.priority < log.currentLevel.priority) then
 		return -- priority too low
 	end
-	if (term.isAvailable() == false)
+	if (term.isAvailable() == false) then
 		return -- term not available
 	end
 	if (gpu ~= nil) then
