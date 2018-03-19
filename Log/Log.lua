@@ -4,7 +4,7 @@ log.level = {}
 log.currentLevel = nil
 
 function log.print(level, message)
-	if (level.priority >= log.currentLevel) then
+	if (level.priority >= log.currentLevel.priority) then
 		print("["..level.name.."] "..message)
 	end
 end
