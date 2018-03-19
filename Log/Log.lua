@@ -18,7 +18,7 @@ function log.print(level, message)
 	end
 	if (gpu ~= nil) then
 		if (level.color ~= nil) then
-			gpu.setForeground(level.color)
+			gpu.setForeground(level.color, true)
 		end
 	end
 	local output = "["..level.name.."] "..message
