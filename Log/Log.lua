@@ -1,4 +1,5 @@
 local term = require("term")
+local colors = require("colors")
 local component = require("component")
 
 local gpu = component.gpu
