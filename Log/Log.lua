@@ -17,9 +17,7 @@ function log.print(level, message)
 		return -- term not available
 	end
 	if (gpu ~= nil) then
-		if (level.color ~= nil) then
-			gpu.setForeground(level.color, true)
-		end
+		gpu.setForeground(level.color, true)
 	end
 	local output = "["..level.name.."] "..message
 	term.write(output.."\n")
@@ -37,6 +35,9 @@ function log.addLevel(name, priority, color)
 	local data = {}
 	data.name = name
 	data.priority = priority
+	if (color == nil) then
+		color = colors.white
+	end
 	data.color = color
 	log.level[string.lower(name)] = data
 end
