@@ -29,6 +29,6 @@ log.addLevel("Info", 100)
 log.addLevel("Warning", 500)
 log.addLevel("Error", 500)
 
-log.setLevel(log.level.Info)
+log.setLevel(log.level.info)
 
 return log
